@@ -6,7 +6,7 @@
 
 ------------
 
-**Task** : Binary Classification (Normal / AbNormal
+**Task** : Binary Classification (Normal / AbNormal)
 
 **Evaluation metric** : F1-score
 
