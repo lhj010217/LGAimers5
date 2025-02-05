@@ -1,42 +1,61 @@
 # LG Aimers 5th
 
-**Public** : 90th/780 (0.208232)
+Public 점수: 90위 / 780팀 (0.208232)
 
-**Private** : 78th/780 (0.208187)
+Private 점수: 78위 / 780팀 (0.208187)
 
-------------
+---
 
-**Task** : Binary Classification (Normal / AbNormal)
+대회 정보
 
-**Evaluation metric** : F1-score
+- 문제 유형: 이진 분류 (Normal / Abnormal)
 
-**Data** : about 400 features, 30,000 samples. (not uploaded due to copyright restrictions)
+- 평가 지표: F1-score
 
-**Timeline** : 2024.08.01 ~ 2024.08.30
+- 데이터: 약 400개의 features, 30,000개 samples
 
-------------
+- 대회 기간: 2024.08.01 ~ 2024.08.30
 
-**-Data Preprocessing**
-1. Remove columns with only one unique value
-2. Replace NaN values with 0
-3. Combine train and test datasets (to standardize column names)
-4. Apply one-hot encoding
-5. Split the combined dataset back into train/test sets
-6. Scaling data using Standard Scaler
+---
 
-**-Machine Learning Process**
-1. Samplling Normal/Abnormal data
-   
-   => Undersampling normal data, oversampling abnormal data
-3. Concatenating the sampled data
-4. Split the data into train/validation sets (90/10 ratio)
-5. Train the initial model
-6. Analyz feature importance and selected features with an importance score greater than 0.01
-7. Perform feature engineering by creating and adding new features
-8. Apply selected features to the train/validation/test sets
-9. Train the final model
-10. Submit the outoput
+데이터 전처리
 
-------------
+1. 값이 하나만 존재하는 컬럼 제거
 
-*EDA code not included
+2. 결측값(NaN)을 0으로 대체
+
+3. 훈련(train) / 테스트(test) 데이터를 하나로 합쳐 컬럼 이름을 정규화
+
+4. 원-핫 인코딩 적용
+
+5. 병합한 데이터를 다시 train/test 세트로 분할
+
+6. Standard Scaler를 사용하여 데이터 스케일링
+
+---
+
+머신러닝 모델 학습
+
+1. Normal / Abnormal 데이터 샘플링
+
+2. Normal 데이터 언더샘플링, Abnormal 데이터 오버샘플링
+
+3. 샘플링된 데이터를 결합
+
+4. 데이터를 훈련(train) / 검증(validation) 세트로 90:10 비율로 분할
+
+5. 초기 모델 학습
+
+6. 피처 중요도 분석 후, 중요도가 0.01 이상인 피처 선택
+
+7. 피처 엔지니어링을 수행하여 새로운 피처 생성 및 추가
+
+8. 선택한 피처를 train/validation/test 세트에 적용
+
+9. 최종 모델 학습
+
+10. 예측 결과 제출
+
+---
+
+*EDA 코드 제외
